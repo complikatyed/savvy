@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More example solutions Wk3Mod4</title>
+</head>
+<body>
+    <div id="primitive-data-types"></div>
+    <div id="array-values"></div>
+    <div id="about-bob"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+        var complex_object = {
+            string: "I'm a string!",
+            number: 42,
+            array: ["all sorts of stuff", 10, true, undefined, {
+                me: "an object",
+                more: "find me in here!"
+            }, function() {
+                console.log('beepity-beep')
+            }],
+            simple_object: {
+                name: 'bob',
+                location: 'basement'
+            },
+            fn: function() {
+                console.log("fn has been invoked! Checking both kinds of invocation-time inputs...")
+                console.log("what is my calling context?", this)
+                console.log("what are my arguments?", arguments)
+            }
+        }
+        
+        $('#primitive-data-types').append(complex_object.string);
+        
+        for (var thingy in complex_object){
+            $('#array-values').append(complex_object[thingy]);
+        }
+        
+        var simple_object = complex_object.simple_object;
+        $('#about-bob').append(simple_object.name);
+        $('#about-bob').append(' is in the ' + simple_object.location);
+        
+        var beeper = function(){
+            var arr = complex_object.array;
+            var beep_generator = arr[5];
+            // console.log(beep_generator);
+            beep_generator();
+        }
+        beeper();
+        
+    </script>
+</body>
+</html>
