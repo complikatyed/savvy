@@ -5,6 +5,7 @@
     <title>More example solutions Wk3Mod4</title>
 </head>
 <body>
+    <div id="car"></div>
     <div id="primitive-data-types"></div>
     <div id="array-values"></div>
     <div id="about-bob"></div>
@@ -49,6 +50,16 @@
             beep_generator();
         }
         beeper();
+        
+        var dream_car = {
+            engine: 'v8',
+            color: 'black',
+            wheels: 4
+        }
+        
+        for(var specs in dream_car){
+            $('#car').append(dream_car[specs]);
+        }
         
     </script>
 </body>
