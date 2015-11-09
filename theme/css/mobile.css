@@ -75,6 +75,16 @@ a {
     border-bottom:0.2vw dotted;
 }
 
+#logo_image{
+  width: 40%;
+  position:absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .menu-icon{
     display: block;
     position: fixed;
@@ -141,7 +151,7 @@ a {
   border-bottom: none;
 }
 
-#icon-bar{
+ul.icon-bar{
     list-style-type:none;
     display:table;
     table-layout:fixed;
@@ -149,24 +159,24 @@ a {
     padding-left: 0px;
     margin-top: 0px;
 }
-#icon-bar p{
+ul.icon-bar p{
   text-indent: 0px;
 }
-#icon-bar li{
+ul.icon-bar li{
     display: table-cell;
     text-align: center;
     padding-top: 8px;
 }
 
-#icon-bar li:first-child a{
+ul.icon-bar li:first-child a{
   color: #ffffff;
 }
 
-#icon-bar li:nth-child(2) a{
+ul.icon-bar li:nth-child(2) a{
   color: #ffffff;
 }
 
-#icon-bar li:nth-child(3) p{
+ul.icon-bar li:nth-child(3) p{
   color: #07c4dd;
 }
 #learnbutton span a {
@@ -258,7 +268,7 @@ a {
 
 #logo2{
   font-family: 'Kreon', serif;
-  font-size: 7vmin;
+  font-size: 10vmin;
   color: #07c4dd;
   vertical-align: middle;
   width: 90%;
@@ -324,7 +334,7 @@ footer ul a{
   column-span: all;
   opacity: 0.6;
 }
-.social #icon-bar li:last-child p{
+.social ul.icon-bar li:last-child p{
   opacity: 1;
   color: #ffffff;
 }
